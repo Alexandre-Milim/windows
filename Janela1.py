@@ -14,7 +14,6 @@ def registrar_pedido():
     Lb_Mesa2.configure(text=Local)
 
 
-#################### Milim ################
 Tela1 = CriarJanela("revisão","300x500+650+150",1)
 
 
@@ -49,7 +48,6 @@ CriarLabelDoCtt = CriarLabel(frame,"Cozinha moderna \n \n Telefone: (18) 92001-8
 CriarLabelDoCtt.configure(font=("Helvetica",14))
 CriarLabelDoCtt.configure(text_color="white")
 
-#################################### Enzo e Mafi #######################################
 def btnMudarTela():
     pass
 
@@ -59,29 +57,14 @@ Tela3.configure(fg_color="#171717")
 
 imagemLogo = CriarImagem(Tela3, "img/caue.png", 1, 5, 100, 100)
 
-
-
-#Aba1
 Abas = CriarAbas(Tela3, 3, 3, 150, 150, "opção1","opção2")
 
-
-#|Aba2
 Aba2 = CriarAbas(Tela3, 3, 5, 150, 150, "opção1","opção2")
-
-#|Aba2
 Aba3 = CriarAbas(Tela3, 3, 7, 150, 150, "opção1","opção2")
 
-########### Aba 1 ###########
-
-# img logo
-
-
-
-# img aba1
 imagemAba1 = CriarImagem(Abas.tab("opção1"), "img/sobe1.png", 0, 5, 100, 100)
 ImagemAba1 = CriarImagem(Abas.tab("opção2"), "img/sobe2.png", 0, 5, 100, 100)
 
-# BOLO
 Lb_Desc_Bolo = CriarLabel(Abas.tab("opção1"), "img/Bolo", 2, 0)
 Lb_Desc_Bolo.grid(sticky="S",columnspan=13)
 Lb_Preco_Bolo = CriarLabel(Abas.tab("opção1"), "R$50,00", 3, 0)
@@ -89,7 +72,6 @@ Lb_Preco_Bolo.grid(sticky="S", columnspan=13)
 Check_Bolo=CriarCheckBox(Abas.tab("opção1"),"Selecione", 5,0)
 Check_Bolo.grid(columnspan=13)
 
- # Torta
 Lb_Desc_Torta = CriarLabel(Abas.tab("opção2"), "Torta Holandesa ", 2, 5)
 Lb_Desc_Torta.grid(sticky="S")
 Lb_Preco_Torta = CriarLabel(Abas.tab("opção2"), "R$75,00", 3, 5)
@@ -97,13 +79,9 @@ Lb_Preco_Torta.grid(sticky="S")
 Check_Torta=CriarCheckBox(Abas.tab("opção2"),"Selecione", 5,0)
 Check_Torta.grid(columnspan=13)
 
-########### Aba 2 ###########
-
-# img Aba2
 imagemAba2 = CriarImagem(Aba2.tab("opção1"), "img/mafi2.png", 0, 5, 100, 100)
 imagemAba2 = CriarImagem(Aba2.tab("opção2"), "img/mafi.png", 0, 5, 100, 100)
 
-#Parmegiana
 Lb_Desc_Parmegiana = CriarLabel(Aba2.tab("opção1"), "Parmegiana", 2, 5)
 Lb_Desc_Parmegiana.grid(sticky="S")
 Lb_Preco_Parmegiana = CriarLabel(Aba2.tab("opção1"), "R$75,00", 3, 5)
@@ -111,7 +89,6 @@ Lb_Preco_Parmegiana.grid(sticky="S")
 Check_Parmegiana=CriarCheckBox(Aba2.tab("opção1"),"Selecione", 5,0)
 Check_Parmegiana.grid(columnspan=13)
 
-#Camarão,
 Lb_Desc_Camarão = CriarLabel(Aba2.tab("opção2"), "Camarão", 2, 5)
 Lb_Desc_Camarão.grid(sticky="S")
 Lb_Preco_Camarão = CriarLabel(Aba2.tab("opção2"), "R$75,00", 3, 5)
@@ -119,16 +96,9 @@ Lb_Preco_Camarão.grid(sticky="S")
 Check_Camarão=CriarCheckBox(Aba2.tab("opção2"),"Selecione", 5,5)
 Check_Camarão.grid(columnspan=13)
 
-
-
-
-########### Aba 3 ###########
-
-# imgAba3
 imagemAba3 = CriarImagem(Aba3.tab("opção1"), "img/coca.png", 0, 5, 100, 100)
 imagemAba3 = CriarImagem(Aba3.tab("opção2"), "img/suco2.png", 0, 5, 100, 100)
 
-# Coca
 Lb_Desc_Coca = CriarLabel(Aba3.tab("opção1"), "Coca", 2, 0)
 Lb_Desc_Coca.grid(sticky="S",columnspan=13)
 Lb_Preco_Coca = CriarLabel(Aba3.tab("opção1"), "R$50,00", 3, 0)
@@ -136,22 +106,12 @@ Lb_Preco_Coca.grid(sticky="S",columnspan=13)
 Check_Coca=CriarCheckBox(Aba3.tab("opção1"),"Selecione", 5,0)
 Check_Coca.grid(columnspan=13)
 
-
-
-# Suco
 Lb_Desc_Suco = CriarLabel(Aba3.tab("opção2"), "Suco", 2, 0)
 Lb_Desc_Suco.grid(sticky="S",columnspan=13)
 Lb_Preco_Suco = CriarLabel(Aba3.tab("opção2"), "R$30,00", 3, 0)
 Lb_Preco_Suco.grid(sticky="S",columnspan=13)
 Check_Suco=CriarCheckBox(Aba3.tab("opção2"),"Selecione", 5,0)
 Check_Suco.grid(columnspan=13)
-
-
-
-
-
-
-########### Botao ###########
 
 botaoPassarProduto = CriarBotao(Tela3, "Confirmar", btnMudarTela, 7, 5, 60, 30)
 
@@ -182,15 +142,6 @@ def btnMudarTela():
 
 botaoPassarProduto = CriarBotao(Tela3, "Confirmar", btnMudarTela, 7, 5, 60, 30)
 
-
-
-
-
-
-####################################   Caue ##################
-
-
-
 def Contatos():
     print("Função Contatos chamada.")
 tk.set_appearance_mode("Dark")
@@ -220,44 +171,28 @@ def Finalizar():
 def VoltarpRevisar():
     Abas.set("MudarpContato")
 
-
-
-
-################## HEADER  ##################
-
 imgHeader = CriarImagem(TelaReserva, "img/unnamed.png", 1, 6, 50, 230)
 
-
-###########   Tela de Reservas   ###########
-
-#Data
 Lb_Data = CriarLabel(Abas.tab("Reservas"), "Data:", 1,2)
 Lb_Data.grid(columnspan=6)
 Lb_Data2 = CriarLabel(Abas.tab("Reservas"), "Data", 1, 6)
 Lb_Data2.grid(columnspan=6)
 
-# #Hora
 Lb_Hora = CriarLabel(Abas.tab("Reservas"), "Hora:", 3, 2)
 Lb_Hora.grid(columnspan=6)
 Lb_Hora2 = CriarLabel(Abas.tab("Reservas"), "Hora", 3, 6)
 Lb_Hora2.grid(columnspan=6)
 
-
-#Número de Pessoas
 Lb_Pessoas = CriarLabel(Abas.tab("Reservas"), "Número de pessoas:            ", 5, 2)
 Lb_Pessoas.grid(columnspan=6)
 Lb_Pessoas2 = CriarLabel(Abas.tab("Reservas"), "Pessoas", 5, 6)
 Lb_Pessoas2.grid(columnspan=6)
 
-
-#Mesa Reservada
 Lb_Mesa = CriarLabel(Abas.tab("Reservas"), "Mesa reservada            :  ", 7, 2)
 Lb_Mesa.grid(columnspan=6)
 Lb_Mesa2 = CriarLabel(Abas.tab("Reservas"), "Mesa", 7, 6)
 Lb_Mesa2.grid(columnspan=6)
 
-
-#Politicas de cancelamento
 Lb_polCancelamento = CriarLabel(Abas.tab("Reservas"), "POLÍTICAS DE CANCELAMENTO:", 9, 0)
 Lb_polCancelamento.configure(text_color="Red")
 Lb_polCancelamento.grid(columnspan=13)
@@ -268,41 +203,34 @@ Lb_polCancelamento2.configure(text_color="#FFFF00")
 Lb_polCancelamento2.grid(columnspan=13)
 
 
-#Botao
 Lb_ConfirmarReserva = CriarLabel(Abas.tab("Reservas"), "", 11, 6)
 btnConfirmarReserva = CriarBotao(Abas.tab("Reservas"), "Confirmar reserva!", ConfirmarReserva, 12, 3, 30, 30)
 btnConfirmarReserva.configure(fg_color="#ffbc4f")
-#
+
 btnMudarpRevisar = CriarBotao(Abas.tab("Reservas"), "Avançar ->",MudarpContato, 12, 12, 30, 30)
 btnMudarpRevisar.configure(fg_color="#ffbc4f")
 
-###########   Tela de Contato   ###########
-
-#Nome
 Lb_Cad_Nome = CriarLabel(Abas.tab("Contato"), "Nome:", 1, 5)
 Lb_Cad_Nome.grid(sticky="S")
 Cx_Cad_Nome = CriarCaixaDeTexto(Abas.tab("Contato"), 150, 30, 1, 6, "Insira seu nome")
 Cx_Cad_Nome.grid(sticky="S")
 Cx_Cad_Nome.configure(fg_color="#ffbc4f")
 
-#Telefone
 Lb_Cad_Tel = CriarLabel(Abas.tab("Contato"), "Telefone:", 2, 5)
 Lb_Cad_Tel.grid(sticky="S")
 Cx_Cad_Tel = CriarCaixaDeTexto(Abas.tab("Contato"), 150, 30, 2, 6, "Insira seu telefone")
 Cx_Cad_Tel.grid(sticky="S")
 Cx_Cad_Tel.configure(fg_color="#ffbc4f")
 
-#Email
 Lb_Cad_Email = CriarLabel(Abas.tab("Contato"), "Email:", 3, 5)
 Lb_Cad_Email.grid(sticky="S")
 Cx_Cad_Email = CriarCaixaDeTexto(Abas.tab("Contato"), 150, 30, 3, 6, "Insira seu email")
 Cx_Cad_Email.grid(sticky="S")
 Cx_Cad_Email.configure(fg_color="#ffbc4f")
 
-#Botao
 btnVoltarpRevisar = CriarBotao(Abas.tab("Contato"), "<- Voltar", VoltarpRevisar, 12, 2, 30, 30)
 btnVoltarpRevisar.configure(fg_color="#ffbc4f")
-#
+
 Lb_EnviarContatos = CriarLabel(Abas.tab("Contato"), "", 11, 6)
 btnEnviarContatos = CriarBotao(Abas.tab("Contato"), "Enviar", EnviarDados, 12, 10, 30, 30)
 btnEnviarContatos.configure(fg_color="#ffbc4f")
