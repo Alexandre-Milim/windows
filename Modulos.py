@@ -3,8 +3,6 @@ from PIL import Image
 from tkcalendar import *
 primeiro = True
 
-
-#---------------Janela---------------
 def CriarJanela(Titulo,Tamanho,Tipo,Cor=0,Redimensionar=False):
     if Tipo == 1:
         Janela = tk.CTk()
@@ -26,8 +24,6 @@ def CriarJanela(Titulo,Tamanho,Tipo,Cor=0,Redimensionar=False):
     Janela.geometry(Tamanho)
     return Janela
 
-
-#---------------Botão---------------
 def CriarBotao(Local,Texto,Comando,Linha,Coluna,Largura,Altura,Cor=0,CorHover=0,CorBackground=0,Imagem="Nada"):
     if Imagem!="Nada":
         imagem_pillow = Image.open(Imagem)
@@ -45,8 +41,6 @@ def CriarBotao(Local,Texto,Comando,Linha,Coluna,Largura,Altura,Cor=0,CorHover=0,
             botao.configure(hover_color=CorHover)
     return botao
 
-
-#---------------Caixa de Texto---------------
 def CriarCaixaDeTexto(Local: object, Largura: object, Altura: object, Linha: object, Coluna: object, Texto: object = 0, Modo: object = "Padrão") -> object:
     Caixa = tk.CTkEntry(Local,width=Largura,height=Altura)
     Caixa.grid(row=Linha,column=Coluna)
@@ -178,8 +172,6 @@ def CriarCaixaDeTexto(Local: object, Largura: object, Altura: object, Linha: obj
 
     return Caixa
 
-#---------------Label---------------
-
 def CriarLabel(Local,Texto,Linha,Coluna,Cor="black"):
     Label = tk.CTkLabel(Local,text=Texto)
     Label.grid(row=Linha,column=Coluna)
@@ -187,7 +179,6 @@ def CriarLabel(Local,Texto,Linha,Coluna,Cor="black"):
         Label.configure(text_color=Cor)
     return Label
 
-#---------------CheckBox---------------
 def CriarCheckBox(Local,Texto,Linha,Coluna,Comando=0):
     check = tk.CTkCheckBox(Local,text=Texto)
     check.grid(row=Linha,column=Coluna)
@@ -202,8 +193,6 @@ def CriarCheckBox2(Local,Texto,Linha,Coluna,Comando=0):
         check.configure(command=Comando)
     return check
 
-#---------------ComboBox---------------
-
 def CriarComboBox(Local, Largura, Altura, Valores, Linha, Coluna, Comando=0, CorBackground=None):
     combo = tk.CTkComboBox(Local, width=Largura, height=Altura, values=Valores, state="readonly")
     combo.grid(row=Linha, column=Coluna)
@@ -214,14 +203,12 @@ def CriarComboBox(Local, Largura, Altura, Valores, Linha, Coluna, Comando=0, Cor
         combo.configure(bg_color=CorBackground)
     return combo
 
-#---------------ProgressBar---------------
 def CriarProgressBar(Local,Largura,Altura,Linha,Coluna):
     progress = tk.CTkProgressBar(Local,width=Largura,height=Altura)
     progress.grid(row=Linha,column=Coluna)
     progress.set(0)
     return progress
 
-#---------------Switch---------------
 def CriarSwitch(Local,Texto,Linha,Coluna,Comando=0):
     switch = tk.CTkSwitch(Local,text=Texto)
     switch.grid(row=Linha,column=Coluna)
@@ -229,14 +216,12 @@ def CriarSwitch(Local,Texto,Linha,Coluna,Comando=0):
      switch.configure(command=Comando)
     return switch
 
-#---------------Slider---------------
 def CriarSlider(Local,Largura,Altura,Linha,Coluna):
     slider = tk.CTkSlider(Local,width=Largura,height=Altura)
     slider.grid(row=Linha,column=Coluna)
     slider.set(0)
     return slider
 
-#---------------Caixa de Texto (rolagem)---------------
 def CriarTexto(Local,Linha,Coluna,Texto,Largura=0,Altura=0):
     caixatxt= tk.CTkTextbox(Local,wrap="word")
     caixatxt.grid(row=Linha,column=Coluna,sticky="nsew")
@@ -248,9 +233,6 @@ def CriarTexto(Local,Linha,Coluna,Texto,Largura=0,Altura=0):
 
     return caixatxt
 
-
-
-#---------------Imagem---------------
 def CriarImagem(Local,Caminho,Linha, Coluna,Altura,Largura):
     imagem_pillow = Image.open(Caminho)
     imageTk = tk.CTkImage(imagem_pillow,size=[Largura,Altura])
@@ -292,4 +274,5 @@ def Calendario(local, Linha, Coluna):
                    year=2007, month=5, day=15,
                    font="Arial 14", locale='en_US')
     cal.grid(row=Linha, column=Coluna, padx=50, pady=10)
+
     return cal
